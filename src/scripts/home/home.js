@@ -7,8 +7,6 @@ define(function (require) {
 
   // ---------------------------------
   var IP = require('home/models/ip');
-  // var Quote = require('home/models/quote');
-  // var Quotes = require('home/collections/quotes');
   var Collection = require('home/collections/collection');
   var Model = require('home/models/model');
 
@@ -28,7 +26,6 @@ define(function (require) {
       this.subViews = [];
       this.collection = new Collection();
       window.col = this.collection;
-      // this.quotes = new Quotes();
     },
 
     render: function() {
@@ -36,11 +33,6 @@ define(function (require) {
       $('body').addClass('home-body');
       this.start();
       this.getUserIP();
-      // ---------------------------------
-      // this.getQuote();
-
-      // ---------------------------------
-
       return this;
     },
 
@@ -49,7 +41,7 @@ define(function (require) {
     start: function() {
       var newModel = new Model();
       this.listenTo(newModel, 'sync', this.addToCollection);
-      newModel.fetch();
+      // newModel.fetch();
     },
 
     addToCollection: function(model) {
@@ -68,21 +60,6 @@ define(function (require) {
       var ip = model.get('query');
       console.log(ip);
     },
-
-    // getQuote: function() {
-    //   var quote = new Quote();
-    //   if (!this.quotes) {
-    //     this.quotes = new Quotes();
-    //   }
-    //   this.quotes.add(quote);
-    //   this.listenTo(quote, 'sync', this.onQuoteSync);
-    //   quote.fetch();
-    // },
-
-    // onQuoteSync: function(model){
-    //   this.state.set({currentQuote: model});
-    //   console.log(this);
-    // },
 
     // ---------------------------------
 
