@@ -6,11 +6,11 @@ html body.home-body .app-content {
 }
 
 .home-body {
-  background-color: rgb(0, 43, 60);
-  color: #B1EFFB;
+  // background-color: rgb(0, 43, 60);
+  // color: #B1EFFB;
 }
 .home-body .app-content {
-  background-color: #111;
+  // background-color: #111;
   border-radius: 10px;
   border-color: #044965;
 }
@@ -68,12 +68,12 @@ button.new-subview:hover {
   border: 1px solid grey;
   margin: 20px 0;
   border-radius: 5px;
-  background: #1C1D1D;
+  // background: #1C1D1D;
   position: relative;
   width: 90%;
   max-width: 650px;
   display: inline-block;
-  background-image: url('../../img/black_linen.png');
+  // background-image: url('../../img/black_linen.png');
 }
 
 
